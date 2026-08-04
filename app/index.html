@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ERVI · Conectamos su negocio con el mundo</title>
+<meta name="description" content="ERVI: importaciones desde China seguras de principio a fin. Sourcing, calidad, logística, aduanas y última milla en un solo aliado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Hilo de ruta / signature element -->
+<div class="route-thread" aria-hidden="true">
+  <svg class="route-thread__svg" viewBox="0 0 4 1000" preserveAspectRatio="none">
+    <path class="route-thread__path" d="M2,0 L2,1000" />
+  </svg>
+  <div class="route-thread__dot" id="routeDot"></div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#top" class="nav__logo">
+      <span class="nav__logo-mark">e</span>rvi
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="#objetivo" class="nav__link" data-nav>Objetivo</a>
+      <a href="#resolvemos" class="nav__link" data-nav>Resolvemos</a>
+      <a href="#servicios" class="nav__link" data-nav>Servicios</a>
+      <a href="#contacto" class="nav__link" data-nav>Contacto</a>
+    </nav>
+    <a href="#contacto" class="nav__cta">Hablemos</a>
+    <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Navegación móvil">
+    <a href="#objetivo" data-nav>Objetivo</a>
+    <a href="#resolvemos" data-nav>Resolvemos</a>
+    <a href="#servicios" data-nav>Servicios</a>
+    <a href="#contacto" data-nav>Contacto</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__globe"></div>
+      <div class="hero__grid"></div>
+    </div>
+    <div class="hero__inner reveal">
+      <p class="eyebrow">Importaciones desde China · puerta a puerta</p>
+      <h1 class="hero__title">
+        Conectamos su <em>negocio</em><br>
+        con el <span class="text-gradient">mundo</span>
+      </h1>
+      <p class="hero__sub">Importaciones desde China, seguras de principio a fin. Un solo aliado que audita, embarca, nacionaliza y entrega — para que usted se enfoque en crecer.</p>
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary">Comience a importar</a>
+        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span></span> scroll</div>
+  </section>
+
+  <!-- OBJETIVO -->
+  <section class="section section--dark" id="objetivo">
+    <div class="section__inner">
+      <p class="eyebrow reveal">01 · Objetivo</p>
+      <h2 class="section__title reveal">
+        Construimos cadenas de suministro <em>seguras, confiables y competitivas</em> que impulsan el crecimiento de nuestros clientes.
+      </h2>
+
+      <div class="objetivo__grid">
+        <div class="objetivo__card reveal">
+          <span class="objetivo__num">Aliado</span>
+          <p>En ERVI somos el aliado estratégico de las empresas que buscan importar desde China con mayor eficiencia, control y rentabilidad. Nos convertimos en una extensión de su área de Compras Internacionales y Logística.</p>
+        </div>
+        <div class="objetivo__card reveal">
+          <span class="objetivo__num">End-to-End</span>
+          <p>Nuestra solución End-to-End centraliza la búsqueda y validación de proveedores, el control de calidad presencial en origen, la gestión logística internacional, el agenciamiento aduanero, almacenamiento y distribución.</p>
+        </div>
+        <div class="objetivo__card reveal">
+          <span class="objetivo__num">Resultado</span>
+          <p>Diseñamos operaciones de abastecimiento que reducen la complejidad, minimizan riesgos y optimizan los recursos de nuestros clientes, permitiéndoles enfocarse en el crecimiento de su negocio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOLVEMOS -->
+  <section class="section section--light" id="resolvemos">
+    <div class="section__inner">
+      <p class="eyebrow reveal">02 · Resolvemos</p>
+      <h2 class="section__title section__title--dark reveal">
+        Importar desde China puede ser una <em>ventaja competitiva</em>… o un riesgo costoso.
+      </h2>
+      <p class="section__lead reveal">La diferencia está en quién acompaña y respalda el proceso.</p>
+
+      <div class="pillars reveal">
+        <div class="pillar">
+          <div class="pillar__icon">⚓</div>
+          <span>Eficiencia</span>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">🤝</div>
+          <span>Confianza</span>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">🌐</div>
+          <span>Crecimiento</span>
+        </div>
+      </div>
+
+      <div class="steps">
+        <p class="steps__title reveal">Nosotros lo hacemos por usted</p>
+        <div class="steps__track reveal">
+          <div class="step"><span class="step__n">01</span><p>Búsqueda de proveedores</p></div>
+          <div class="step"><span class="step__n">02</span><p>Negociación y compra</p></div>
+          <div class="step"><span class="step__n">03</span><p>Consolidación y embarque</p></div>
+          <div class="step"><span class="step__n">04</span><p>Transporte internacional</p></div>
+          <div class="step"><span class="step__n">05</span><p>Nacionalización y trámites</p></div>
+          <div class="step"><span class="step__n">06</span><p>Almacenamiento</p></div>
+          <div class="step"><span class="step__n">07</span><p>Comercialización digital</p></div>
+          <div class="step"><span class="step__n">08</span><p>Entrega de última milla</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section section--dark" id="servicios">
+    <div class="section__inner">
+      <p class="eyebrow reveal">03 · Servicios</p>
+      <h2 class="section__title reveal">Soluciones integrales de comercio internacional que conectan su negocio con oportunidades globales.</h2>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon">🔍</div>
+          <h3>Búsqueda estratégica de proveedores</h3>
+          <p>Identificamos y validamos fabricantes que se ajustan a sus especificaciones técnicas, priorizando calidad, capacidad de producción y condiciones comerciales competitivas.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">🧵</div>
+          <h3>Gestión de muestras comerciales</h3>
+          <p>Coordinamos el envío de muestras para validar calidad, funcionalidad y cumplimiento de especificaciones antes de una compra a gran escala.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">🏭</div>
+          <h3>Auditoría de fábricas</h3>
+          <p>Verificamos la existencia, capacidad operativa, solvencia y confiabilidad de los fabricantes en China para minimizar riesgos comerciales.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">✅</div>
+          <h3>Inspección de calidad en origen</h3>
+          <p>Realizamos inspecciones antes del embarque para verificar que los productos cumplan con las especificaciones y estándares definidos.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">🚢</div>
+          <h3>Gestión integral de la importación</h3>
+          <p>Coordinamos todo el proceso de negociación y logística internacional, desde los términos comerciales hasta el seguimiento de la carga.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">📋</div>
+          <h3>Nacionalización aduanera</h3>
+          <p>Gestionamos el proceso de nacionalización para que su carga cumpla con toda la normativa aduanera colombiana vigente.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">📦</div>
+          <h3>Almacenamiento</h3>
+          <p>Soluciones de almacenamiento seguro y eficiente en bodegas estratégicamente ubicadas en China, con monitoreo 24/7.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">🚛</div>
+          <h3>Transporte nacional</h3>
+          <p>Coordinamos el traslado de su mercancía desde el puerto o servicio hasta el destino final en cualquier ciudad de Colombia.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">📍</div>
+          <h3>Distribución de última milla</h3>
+          <p>Llevamos sus productos hasta el cliente final con cobertura nacional y seguimiento en tiempo real de las entregas.</p>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-card__icon">🛒</div>
+          <h3>Aceleración comercial · E-commerce</h3>
+          <p>Impulsamos la comercialización de sus productos mediante nuestra plataforma digital y red de aliados, ampliando sus oportunidades de venta.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section section--contact" id="contacto">
+    <div class="section__inner">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="eyebrow">04 · Contacto</p>
+          <h2 class="section__title">Simplificamos su operación para que importe con mayor <em>confianza, eficiencia y respaldo.</em></h2>
+          <ul class="contact-list">
+            <li><span>✉️</span> <a href="mailto:comercial@ervi.com.co">comercial@ervi.com.co</a></li>
+            <li><span>📞</span> <a href="tel:+573104906907">(+57) 310 490 6907</a></li>
+            <li><span>🌐</span> <a href="https://www.ervi.com.co" target="_blank" rel="noopener">www.ervi.com.co</a></li>
+          </ul>
+          <div class="contact-badges">
+            <span>Confianza que respalda</span>
+            <span>Eficiencia que impulsa</span>
+            <span>Alianzas que conectan</span>
+            <span>Resultados que trascienden</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" placeholder="Su nombre" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="usted@empresa.com" required>
+          </div>
+          <div class="form-row">
+            <label for="company">Empresa</label>
+            <input type="text" id="company" name="company" placeholder="Nombre de su empresa">
+          </div>
+          <div class="form-row">
+            <label for="message">Cuéntenos qué necesita importar</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ej: busco proveedor de textiles con inspección de calidad en origen" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Enviar mensaje</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span class="nav__logo"><span class="nav__logo-mark">e</span>rvi</span>
+      <p>© <span id="year"></span> ERVI. Conectamos su negocio con el mundo.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

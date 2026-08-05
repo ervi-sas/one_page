@@ -254,42 +254,54 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(ellipse 900px 600px at 82% 8%, rgba(91,63,232,0.45), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 10% 100%, rgba(34,229,208,0.18), transparent 60%),
-    var(--bg);
+    linear-gradient(100deg, rgba(9,12,36,0.5) 0%, var(--bg) 58%),
+    linear-gradient(rgba(9,12,36,0.35), rgba(9,12,36,0.35)),
+    radial-gradient(ellipse 700px 500px at 10% 100%, rgba(34,229,208,0.14), transparent 60%),
+    url('img/hero-globe.jpg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
 }
-.hero__globe {
+@media (max-width: 780px) {
+  .hero__bg {
+    background:
+      linear-gradient(180deg, rgba(9,12,36,0.6) 0%, var(--bg) 70%),
+      linear-gradient(rgba(9,12,36,0.4), rgba(9,12,36,0.4)),
+      url('img/hero-globe.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
+/* ============================================
+   Reusable: full-bleed section photo + gradient
+   ============================================ */
+.section--photo { position: relative; overflow: hidden; }
+.section--photo .section__inner { position: relative; z-index: 1; }
+.section-photo {
   position: absolute;
-  top: 50%; left: 50%;
-  width: 900px; height: 900px;
-  margin: -450px 0 0 -450px;
-  border-radius: 50%;
-  background:
-    repeating-radial-gradient(circle at center, rgba(255,255,255,0.05) 0 1px, transparent 1px 34px);
-  border: 1px solid var(--border-dark);
-  animation: spin 90s linear infinite;
-  opacity: 0.6;
+  inset: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  opacity: 0.5;
 }
-.hero__globe::before, .hero__globe::after {
+.section-photo::after {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 50%;
-  border: 1px dashed var(--border-dark);
+  background: linear-gradient(100deg, transparent 0%, var(--bg) 48%);
 }
-.hero__globe::before { inset: 90px; }
-.hero__globe::after { inset: 220px; }
-@keyframes spin { to { transform: rotate(360deg); } }
+.section-photo--objetivo { background-image: url('img/objetivo-puerto.jpg'); }
+.section-photo--servicios { background-image: url('img/servicio-proveedores.jpg'); }
 
-.hero__grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--border-dark) 1px, transparent 1px),
-    linear-gradient(90deg, var(--border-dark) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
-  opacity: 0.5;
+@media (max-width: 780px) {
+  .section-photo { opacity: 0.28; }
+  .section-photo::after {
+    background: linear-gradient(180deg, transparent 0%, var(--bg) 65%);
+  }
 }
 
 .hero__inner { position: relative; z-index: 2; max-width: 780px; }
@@ -486,7 +498,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-top: 56px;
 }
 .service-card {
-  background: var(--surface);
+  background: rgba(19,26,82,0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid var(--border-dark);
   border-radius: var(--radius);
   padding: 28px;
@@ -495,7 +509,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .service-card:hover {
   transform: translateY(-5px);
   border-color: rgba(34,229,208,0.4);
-  background: var(--surface-2);
+  background: rgba(26,34,102,0.82);
 }
 .service-card__icon {
   width: 44px; height: 44px;
@@ -529,6 +543,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 56px;
   grid-template-columns: 1fr;
 }
+.contact-info__media {
+  width: 140px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-dark);
+  margin-bottom: 28px;
+  box-shadow: 0 20px 40px -18px rgba(34,229,208,0.35);
+}
+.contact-info__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .contact-info .section__title { margin-bottom: 34px; }
 .contact-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
 .contact-list li { display: flex; align-items: center; gap: 12px; font-size: 1.02rem; }

@@ -37,7 +37,7 @@ body {
 }
 
 h1, h2, h3, h4 { font-family: "Poppins", ui-sans-serif, system-ui, sans-serif; letter-spacing: -0.02em; line-height: 1.1; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%;  }
 a { color: inherit; text-decoration: none; }
 svg { width: 100%; height: 100%; }
 ul { list-style: none; }
@@ -78,6 +78,7 @@ ul { list-style: none; }
 }
 .nav { display: flex; align-items: center; justify-content: space-between; padding-top: .75rem; padding-bottom: .75rem; }
 .logo { display: inline-flex; align-items: center; gap: .5rem; }
+.logo-image { display: block; width: auto; height: 2.75rem; }
 .logo-mark {
   display: grid; place-items: center; width: 2.25rem; height: 2.25rem;
   border-radius: .75rem; background: var(--gradient-brand); color: #fff;
@@ -246,6 +247,7 @@ h2.xxl { font-size: clamp(3rem, 8vw, 4.5rem); }
 /* ---------- Animación de aparición ---------- */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.22, 1, .36, 1); }
 .reveal.is-visible { opacity: 1; transform: none; }
+.reveal.is-visible img{ border-radius: 1em; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }

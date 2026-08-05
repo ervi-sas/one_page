@@ -147,6 +147,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   letter-spacing: -0.02em;
   margin-right: auto;
 }
+.nav__logo-image { display: block; width: auto; height: 34px; }
 .nav__logo-mark {
   display: inline-grid;
   place-items: center;
@@ -254,7 +255,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   inset: 0;
   z-index: 0;
   background:
-    linear-gradient(100deg, rgba(9,12,36,0.5) 0%, var(--bg) 58%),
+    linear-gradient(100deg, rgba(9,12,36,0.5) 40%, var(--bg) 58%),
     linear-gradient(rgba(9,12,36,0.35), rgba(9,12,36,0.35)),
     radial-gradient(ellipse 700px 500px at 10% 100%, rgba(34,229,208,0.14), transparent 60%),
     url('img/hero-globe.jpg');
@@ -292,7 +293,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, transparent 0%, var(--bg) 48%);
+  background: linear-gradient(273deg, transparent 44%, var(--bg) 85%);
 }
 .section-photo--objetivo { background-image: url('img/objetivo-puerto.jpg'); }
 .section-photo--servicios { background-image: url('img/servicio-proveedores.jpg'); }

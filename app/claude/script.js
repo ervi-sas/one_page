@@ -74,11 +74,33 @@ updateRouteDot();
 window.addEventListener('scroll', updateRouteDot, { passive: true });
 window.addEventListener('resize', updateRouteDot);
 
-/* Contact form (demo — no backend wired yet) */
+/* Contact form */
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  formNote.textContent = '¡Gracias! Hemos recibido su mensaje. Nuestro equipo comercial se pondrá en contacto pronto.';
-  form.reset();
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  const data = Object.fromEntries(new FormData(form));
+
+  submitButton.disabled = true;
+  formNote.textContent = 'Enviando mensaje...';
+
+  try {
+    const response = await fetch('https://n8n.almalogix.com/webhook/ervi-mail-contacto', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+    formNote.textContent = '¡Gracias! Hemos recibido su mensaje. Nuestro equipo comercial se pondrá en contacto pronto.';
+    form.reset();
+  } catch (error) {
+    console.error('Error al enviar el formulario:', error);
+    formNote.textContent = 'No pudimos enviar su mensaje. Inténtelo de nuevo más tarde.';
+  } finally {
+    submitButton.disabled = false;
+  }
 });

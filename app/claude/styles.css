@@ -490,6 +490,65 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ============================================
+   Diferencia — "Lo que realmente marca la diferencia"
+   ============================================ */
+.diferencia__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin-top: 56px;
+}
+.diferencia__card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius);
+  padding: 32px 28px 28px;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+.diferencia__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(34,229,208,0.4);
+  background: var(--surface-2);
+}
+.diferencia__num {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.55;
+  letter-spacing: 0.04em;
+}
+.diferencia__icon {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(91,63,232,0.35), rgba(34,229,208,0.2));
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+}
+.diferencia__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+  padding-right: 30px;
+}
+.diferencia__card p { color: var(--text-muted); font-size: 0.92rem; }
+.diferencia__card p strong { color: var(--accent-2); font-weight: 600; }
+
+@media (min-width: 640px) {
+  .diferencia__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1000px) {
+  .diferencia__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================
    Servicios
    ============================================ */
 .services-grid {
@@ -526,6 +585,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: -0.01em;
+}
+.service-card strong {
+  color: var(--accent);
 }
 .service-card p { color: var(--text-muted); font-size: 0.92rem; }
 

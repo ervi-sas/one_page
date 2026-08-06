@@ -5,8 +5,9 @@ on:
   # Ejecutar cada vez que se haga push
   push:
     # Solo cuando el push sea sobre la rama master
-    branches:
-      - master
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 # Permisos que GitHub otorgará temporalmente al workflow
 permissions:
   contents: read
